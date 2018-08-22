@@ -1,0 +1,193 @@
+!SESSION 2018-08-20 16:55:03.158 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170222-0400
+java.version=1.8.0_60
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-08-20 16:56:35.984
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\IBM'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 17 2018-08-20 16:56:41.765
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: Connect to dev.eclipse.org:443 [dev.eclipse.org/198.41.30.200] failed: Read timed out. ; version: 2.0.3.v20161205-0933
+!STACK 0
+org.apache.http.conn.ConnectTimeoutException: Connect to dev.eclipse.org:443 [dev.eclipse.org/198.41.30.200] failed: Read timed out
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:134)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:319)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at org.apache.http.client.fluent.Executor.execute(Executor.java:206)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.request(IO.java:206)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:68)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:124)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.security.ssl.InputRecord.readFully(Unknown Source)
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:290)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:259)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:125)
+	... 16 more
+!SESSION 2018-08-20 16:58:19.189 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170222-0400
+java.version=1.8.0_60
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-08-20 16:58:46.125
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\IBM'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-08-20 17:00:17.549
+!MESSAGE Failed to decrypt password for server central: org.sonatype.plexus.components.sec.dispatcher.SecDispatcherException: java.io.FileNotFoundException: C:\Users\IBM\.m2\settings-security.xml (The system cannot find the file specified)
+!STACK 0
+org.sonatype.plexus.components.sec.dispatcher.SecDispatcherException: org.sonatype.plexus.components.sec.dispatcher.SecDispatcherException: java.io.FileNotFoundException: C:\Users\IBM\.m2\settings-security.xml (The system cannot find the file specified)
+	at org.sonatype.plexus.components.sec.dispatcher.DefaultSecDispatcher.decrypt(DefaultSecDispatcher.java:121)
+	at org.apache.maven.settings.crypto.DefaultSettingsDecrypter.decrypt(DefaultSettingsDecrypter.java:107)
+	at org.apache.maven.settings.crypto.DefaultSettingsDecrypter.decrypt(DefaultSettingsDecrypter.java:63)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.decryptPassword(MavenImpl.java:547)
+	at org.eclipse.m2e.core.internal.repository.RepositoryRegistry.getAuthenticationInfo(RepositoryRegistry.java:214)
+	at org.eclipse.m2e.core.internal.repository.RepositoryRegistry.updateRegistry(RepositoryRegistry.java:258)
+	at org.eclipse.m2e.core.internal.repository.RepositoryRegistryUpdateJob.run(RepositoryRegistryUpdateJob.java:47)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.sonatype.plexus.components.sec.dispatcher.SecDispatcherException: java.io.FileNotFoundException: C:\Users\IBM\.m2\settings-security.xml (The system cannot find the file specified)
+	at org.sonatype.plexus.components.sec.dispatcher.SecUtil.read(SecUtil.java:69)
+	at org.sonatype.plexus.components.sec.dispatcher.DefaultSecDispatcher.getSec(DefaultSecDispatcher.java:206)
+	at org.sonatype.plexus.components.sec.dispatcher.DefaultSecDispatcher.decrypt(DefaultSecDispatcher.java:90)
+	... 7 more
+Caused by: java.io.FileNotFoundException: C:\Users\IBM\.m2\settings-security.xml (The system cannot find the file specified)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(Unknown Source)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at org.sonatype.plexus.components.sec.dispatcher.SecUtil.toStream(SecUtil.java:100)
+	at org.sonatype.plexus.components.sec.dispatcher.SecUtil.read(SecUtil.java:56)
+	... 9 more
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-08-20 17:00:17.682
+!MESSAGE Failed to decrypt password for server snapshots: org.sonatype.plexus.components.sec.dispatcher.SecDispatcherException: java.io.FileNotFoundException: C:\Users\IBM\.m2\settings-security.xml (The system cannot find the file specified)
+!STACK 0
+org.sonatype.plexus.components.sec.dispatcher.SecDispatcherException: org.sonatype.plexus.components.sec.dispatcher.SecDispatcherException: java.io.FileNotFoundException: C:\Users\IBM\.m2\settings-security.xml (The system cannot find the file specified)
+	at org.sonatype.plexus.components.sec.dispatcher.DefaultSecDispatcher.decrypt(DefaultSecDispatcher.java:121)
+	at org.apache.maven.settings.crypto.DefaultSettingsDecrypter.decrypt(DefaultSettingsDecrypter.java:107)
+	at org.apache.maven.settings.crypto.DefaultSettingsDecrypter.decrypt(DefaultSettingsDecrypter.java:63)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.decryptPassword(MavenImpl.java:547)
+	at org.eclipse.m2e.core.internal.repository.RepositoryRegistry.getAuthenticationInfo(RepositoryRegistry.java:214)
+	at org.eclipse.m2e.core.internal.repository.RepositoryRegistry.updateRegistry(RepositoryRegistry.java:258)
+	at org.eclipse.m2e.core.internal.repository.RepositoryRegistryUpdateJob.run(RepositoryRegistryUpdateJob.java:47)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.sonatype.plexus.components.sec.dispatcher.SecDispatcherException: java.io.FileNotFoundException: C:\Users\IBM\.m2\settings-security.xml (The system cannot find the file specified)
+	at org.sonatype.plexus.components.sec.dispatcher.SecUtil.read(SecUtil.java:69)
+	at org.sonatype.plexus.components.sec.dispatcher.DefaultSecDispatcher.getSec(DefaultSecDispatcher.java:206)
+	at org.sonatype.plexus.components.sec.dispatcher.DefaultSecDispatcher.decrypt(DefaultSecDispatcher.java:90)
+	... 7 more
+Caused by: java.io.FileNotFoundException: C:\Users\IBM\.m2\settings-security.xml (The system cannot find the file specified)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(Unknown Source)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at org.sonatype.plexus.components.sec.dispatcher.SecUtil.toStream(SecUtil.java:100)
+	at org.sonatype.plexus.components.sec.dispatcher.SecUtil.read(SecUtil.java:56)
+	... 9 more
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-08-20 17:00:17.855
+!MESSAGE Failed to decrypt password for server central: org.sonatype.plexus.components.sec.dispatcher.SecDispatcherException: java.io.FileNotFoundException: C:\Users\IBM\.m2\settings-security.xml (The system cannot find the file specified)
+!STACK 0
+org.sonatype.plexus.components.sec.dispatcher.SecDispatcherException: org.sonatype.plexus.components.sec.dispatcher.SecDispatcherException: java.io.FileNotFoundException: C:\Users\IBM\.m2\settings-security.xml (The system cannot find the file specified)
+	at org.sonatype.plexus.components.sec.dispatcher.DefaultSecDispatcher.decrypt(DefaultSecDispatcher.java:121)
+	at org.apache.maven.settings.crypto.DefaultSettingsDecrypter.decrypt(DefaultSettingsDecrypter.java:107)
+	at org.apache.maven.settings.crypto.DefaultSettingsDecrypter.decrypt(DefaultSettingsDecrypter.java:63)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.decryptPassword(MavenImpl.java:547)
+	at org.eclipse.m2e.core.internal.repository.RepositoryRegistry.getAuthenticationInfo(RepositoryRegistry.java:214)
+	at org.eclipse.m2e.core.internal.repository.RepositoryRegistry.updateRegistry(RepositoryRegistry.java:258)
+	at org.eclipse.m2e.core.internal.repository.RepositoryRegistryUpdateJob.run(RepositoryRegistryUpdateJob.java:47)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.sonatype.plexus.components.sec.dispatcher.SecDispatcherException: java.io.FileNotFoundException: C:\Users\IBM\.m2\settings-security.xml (The system cannot find the file specified)
+	at org.sonatype.plexus.components.sec.dispatcher.SecUtil.read(SecUtil.java:69)
+	at org.sonatype.plexus.components.sec.dispatcher.DefaultSecDispatcher.getSec(DefaultSecDispatcher.java:206)
+	at org.sonatype.plexus.components.sec.dispatcher.DefaultSecDispatcher.decrypt(DefaultSecDispatcher.java:90)
+	... 7 more
+Caused by: java.io.FileNotFoundException: C:\Users\IBM\.m2\settings-security.xml (The system cannot find the file specified)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(Unknown Source)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at org.sonatype.plexus.components.sec.dispatcher.SecUtil.toStream(SecUtil.java:100)
+	at org.sonatype.plexus.components.sec.dispatcher.SecUtil.read(SecUtil.java:56)
+	... 9 more
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-08-20 17:00:17.873
+!MESSAGE Failed to decrypt password for server snapshots: org.sonatype.plexus.components.sec.dispatcher.SecDispatcherException: java.io.FileNotFoundException: C:\Users\IBM\.m2\settings-security.xml (The system cannot find the file specified)
+!STACK 0
+org.sonatype.plexus.components.sec.dispatcher.SecDispatcherException: org.sonatype.plexus.components.sec.dispatcher.SecDispatcherException: java.io.FileNotFoundException: C:\Users\IBM\.m2\settings-security.xml (The system cannot find the file specified)
+	at org.sonatype.plexus.components.sec.dispatcher.DefaultSecDispatcher.decrypt(DefaultSecDispatcher.java:121)
+	at org.apache.maven.settings.crypto.DefaultSettingsDecrypter.decrypt(DefaultSettingsDecrypter.java:107)
+	at org.apache.maven.settings.crypto.DefaultSettingsDecrypter.decrypt(DefaultSettingsDecrypter.java:63)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.decryptPassword(MavenImpl.java:547)
+	at org.eclipse.m2e.core.internal.repository.RepositoryRegistry.getAuthenticationInfo(RepositoryRegistry.java:214)
+	at org.eclipse.m2e.core.internal.repository.RepositoryRegistry.updateRegistry(RepositoryRegistry.java:258)
+	at org.eclipse.m2e.core.internal.repository.RepositoryRegistryUpdateJob.run(RepositoryRegistryUpdateJob.java:47)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.sonatype.plexus.components.sec.dispatcher.SecDispatcherException: java.io.FileNotFoundException: C:\Users\IBM\.m2\settings-security.xml (The system cannot find the file specified)
+	at org.sonatype.plexus.components.sec.dispatcher.SecUtil.read(SecUtil.java:69)
+	at org.sonatype.plexus.components.sec.dispatcher.DefaultSecDispatcher.getSec(DefaultSecDispatcher.java:206)
+	at org.sonatype.plexus.components.sec.dispatcher.DefaultSecDispatcher.decrypt(DefaultSecDispatcher.java:90)
+	... 7 more
+Caused by: java.io.FileNotFoundException: C:\Users\IBM\.m2\settings-security.xml (The system cannot find the file specified)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(Unknown Source)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at org.sonatype.plexus.components.sec.dispatcher.SecUtil.toStream(SecUtil.java:100)
+	at org.sonatype.plexus.components.sec.dispatcher.SecUtil.read(SecUtil.java:56)
+	... 9 more
+!SESSION 2018-08-20 17:02:27.209 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170222-0400
+java.version=1.8.0_60
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Framework arguments:  -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product -data file:/E:/OnlineExamPortal/Online/ -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-08-20 17:02:36.348
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\IBM'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2018-08-20 17:05:40.764 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170222-0400
+java.version=1.8.0_60
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-08-20 17:06:07.879
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\IBM'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
