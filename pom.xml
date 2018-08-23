@@ -5,7 +5,9 @@
 	<artifactId>Demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<profiles>
+	
+	<properties>
+		<profiles>
 		<profile>
 		<id>sonar</id>
 			<properties>
@@ -16,7 +18,6 @@
 			</properties>
 		</profile>
         </profiles>
-	<properties>
 	<dependencies>
 
 
